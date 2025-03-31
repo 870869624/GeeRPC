@@ -26,10 +26,10 @@ const (
 	JsonType Type = "application/json" // not implemented
 )
 
-var NewCodeFuncMap map[Type]NewCodecFunc
+var NewCodecFuncMap map[Type]NewCodecFunc
 
 func init() {
-	NewCodeFuncMap = make(map[Type]NewCodecFunc)
-	NewCodeFuncMap[GobType] = NewGobCodec
+	NewCodecFuncMap = make(map[Type]NewCodecFunc)
+	NewCodecFuncMap[GobType] = NewGobCodec
 
 }
